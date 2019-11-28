@@ -1,0 +1,51 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "browser_action.html".
+ -->
+<html>
+<head>
+    <style type="text/css">
+        body {
+            max-width: 700px;
+            width: 700px;
+            padding-bottom: 15px;
+        }
+
+        div.pre {
+            overflow: auto;
+            background-color: floralwhite;
+            max-height: 350px;
+            white-space: pre;
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+        .string {
+            color: green;
+        }
+
+        .number {
+            color: darkorange;
+        }
+
+        .boolean {
+            color: blue;
+        }
+
+        .null {
+            color: magenta;
+        }
+
+        .key {
+            color: red;
+        }
+    </style>
+    <script src="popup.js"></script>
+</head>
+
+<body>
+<div id="container"></div>
+</body>
+</html>

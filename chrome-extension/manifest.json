@@ -1,0 +1,58 @@
+{
+  "manifest_version": 2,
+  "icons": {
+    "16": "images/cat-16.png",
+    "24": "images/cat-24.png",
+    "32": "images/cat-32.png",
+    "128": "images/cat-128.png"
+  },
+  "name": "Black Panther",
+  "description": "Press Ctrl + B",
+  "version": "0.1",
+  "update_url": "https://localhost:5000/",
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Ctrl+B",
+        "mac": "Command+B",
+        "chromeos": "Ctrl+B",
+        "linux": "Ctrl+B"
+      }
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "jquery-3.0.0.min.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Black Panther",
+    "default_popup": "browser_action.html",
+    "default_icon": {
+      "16": "images/cat-16.png",
+      "24": "images/cat-24.png",
+      "32": "images/cat-32.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "https://ajax.googleapis.com/",
+    "tabs",
+    "notifications",
+    "http://*/",
+    "https://*/"
+  ]
+}
